@@ -10,7 +10,7 @@ jobs:
       - uses: robinraju/release-downloader@v1.8
         with:
           repository: 'jiep/lottery'
-          fileName: '*'
+          fileName: 'lottery-x86_64-unknown-linux-gnu.zip'
           tag: 'v0.2.2'
           out-file-path: 'lottery'
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -19,7 +19,7 @@ jobs:
           cd lottery
           unzip *.zip
           ./lottery find --number 44733 --json > ~/44733.json
-          cd .. && rm lottery
+          cd .. && rm -rf lottery
     
       - name: Checkout repo
         uses: actions/checkout@v3
