@@ -12,5 +12,14 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  server: {
+    proxy: {
+      '/.netlify': {
+        target: 'http://localhost:8888',
+        changeOrigin: true,
+        rewrite: (path: any) => path.replace(/^\/.netlify\/functions/, ''),
+      },
+    }
   }
 })
