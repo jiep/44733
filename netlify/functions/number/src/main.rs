@@ -18,7 +18,7 @@ async fn main() -> Result<(), Error> {
 pub(crate) async fn my_handler(event: ApiGatewayProxyRequest, _ctx: Context) -> Result<ApiGatewayProxyResponse, Error> {
     let _path = event.path.unwrap();
 
-    let url: &str = "https://www.loteriasyapuestas.es/servicios/premioDecimoWeb?idsorteo=1222809102";
+    let url: &str = "https://www.loteriasyapuestas.es/new-geo-web/JsonGenerationServlet/exportPois.txt?drawId=1222809102&number=";
 
     let number: u32 = 44733;
 
