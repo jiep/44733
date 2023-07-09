@@ -6,6 +6,8 @@ jobs:
   build_and_test:
     name: Download release
     runs-on: ubuntu-latest
+    outputs:
+      changes_exist: ${{ steps.changes.outputs.changes_exist }}
     steps:
       - uses: robinraju/release-downloader@v1.8
         with:
@@ -28,7 +30,17 @@ jobs:
         run: |
           mv ~/44733.json public/data/44733.json
 
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --exit-code; then
+            echo "::set-output name=changes_exist::false"
+          else
+            echo "::set-output name=changes_exist::true"
+          fi
+
       - name: Push to GitHub
+        if: ${{ steps.changes.outputs.changes_exist == 'true' }}
         run: |
           git config user.name ${{ github.actor }}
           git config user.email ${{ github.actor }}@users.noreply.github.com
