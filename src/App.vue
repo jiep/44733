@@ -7,7 +7,7 @@ import NavBar from './components/NavBar.vue'
   <section class="h-full">
     <NavBar/>
     <Suspense class="h-full bg-yellow-50">
-      <RouterView class="h-full" />
+      <RouterView class="h-full bg-yellow-50" />
     </Suspense>
   </section>
 </template>
