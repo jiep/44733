@@ -1,6 +1,10 @@
 # 44733
 
-This template should help get you started developing with Vue 3 in Vite.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d59b6711-5529-46bb-996a-4e4346173334/deploy-status)](https://app.netlify.com/sites/44733/deploys)
+
+<p align="center">
+  <img src="src/assets/logo.png" width="20%" />
+</p>
 
 ## Recommended IDE Setup
 
