@@ -1,5 +1,4 @@
 <template>
-
   <header class="bg-yellow-500 flex h-16 items-center px-4">
       <div class="flex flex-1 items-center justify-center min-h-full">
         <nav>
@@ -10,9 +9,4 @@
         </nav>
       </div>
   </header>
-  <!-- <nav class="bg-yellow-500 py-4">
-    <div class="container mx-auto flex items-center justify-center">
-      
-    </div>
-  </nav> -->
 </template>
