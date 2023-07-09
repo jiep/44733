@@ -9,7 +9,10 @@ defineProps<{
 </script>
 
 <template>
-    <div class="m-4" v-for="item in items">  
-        <LocationItem :location="item" />
-    </div>  
+    <section class="h-full overflow-y-auto bg-yellow-50 md:mx-auto">
+        <div class="m-4" v-for="item in items">  
+            <LocationItem :location="item" />
+        </div>
+    </section>
+      
 </template>

@@ -6,8 +6,8 @@ import NavBar from './components/NavBar.vue'
 <template>
   <section class="h-full">
     <NavBar/>
-    <Suspense>
-      <RouterView />
+    <Suspense class="h-full">
+      <RouterView class="h-full" />
     </Suspense>
   </section>
 </template>
