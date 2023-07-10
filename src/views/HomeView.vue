@@ -16,15 +16,15 @@
                .sort((a: Location, b:Location) => b.series.length - a.series.length)
 
   async function onClick() {
-    console.log(number.value);
+    // console.log(number.value);
     
-    const response = await fetch(`.netlify/functions/number?number=${number.value.toString().padStart(5, '0')}`)
-    const data = await response.json()
+    // const response = await fetch(`.netlify/functions/number?number=${number.value.toString().padStart(5, '0')}`)
+    // const data = await response.json()
 
-    const d: Array<Location> = data.locations;
+    // const d: Array<Location> = data.locations;
 
-    items = d.map(x => new Location(x.name, x.address, x.city, x.province, x.series))
-             .sort((a: Location, b:Location) => b.series.length - a.series.length)
+    // items = d.map(x => new Location(x.name, x.address, x.city, x.province, x.series))
+    //          .sort((a: Location, b:Location) => b.series.length - a.series.length)
   }
 
 </script>
