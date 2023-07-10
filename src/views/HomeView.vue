@@ -35,5 +35,15 @@
 </script>
 
 <template>
+    <!-- <Tabs /> -->
+    <div class="flex m-4 pt-0 items-center">
+      <input type="number" min="0" max="100000"
+        placeholder="Introduce un número para buscar" 
+        class="px-3 py-3 placeholder-slate-400 text-slate-600 relative bg-white bg-white text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full" 
+        v-model="number" 
+      />
+      <button class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" @click="onClick()"
+      >Buscar</button>
+    </div>
     <LocationList :items="items" />
 </template>
