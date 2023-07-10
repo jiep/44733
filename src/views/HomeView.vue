@@ -29,8 +29,7 @@
     items = d.map(x => new Location(x.name, x.address, x.city, x.province, x.series))
              .sort((a: Location, b:Location) => b.series.length - a.series.length)
 
-    locations.length = 0;
-    locations.push(...items)
+    Object.assign(locations, items)
 
     console.log(locations)
   }
