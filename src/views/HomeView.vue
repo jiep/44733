@@ -18,7 +18,7 @@
                .sort((a: Location, b:Location) => b.series.length - a.series.length)
   }
 
-  const response = await fetch(`.netlify/functions/number?number=${number}`)
+  const response = await fetch(`.netlify/functions/number?number=${number.value}`)
 
   const data = await response.json()
 
