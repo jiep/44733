@@ -2,7 +2,10 @@
   import LocationList from '@/components/LocationList.vue'
   import { Location }from '@/model/Location'
 
-  const response = await fetch(".netlify/functions/number")
+  const number = 44733;
+
+  const response = await fetch(`.netlify/functions/number?number=${number}`)
+
   const data = await response.json()
   
   let items: Array<Location> = data.locations;
