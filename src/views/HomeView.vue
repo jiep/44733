@@ -7,6 +7,7 @@
   const number = ref(44733)
 
   const locations = reactive(new Array<Location>);
+
   
   const response = await fetch(`.netlify/functions/number?number=${number.value}`)
   const data = await response.json()
@@ -30,6 +31,8 @@
 
     locations.length = 0;
     locations.push(...items)
+
+    console.log(locations)
   }
 
 </script>
