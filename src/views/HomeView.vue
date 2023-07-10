@@ -17,7 +17,7 @@
 
   locations.items = items;
 
-  async function onClick() {
+  async function onClick(number: any) {
     console.log(number.value);
     
     const response = await fetch(`.netlify/functions/number?number=${number.value.toString().padStart(5, '0')}`)
@@ -43,7 +43,7 @@
         class="px-3 py-3 placeholder-slate-400 text-slate-600 relative bg-white bg-white text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full" 
         v-model="number" 
       />
-      <button class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" @click="onClick()"
+      <button class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" @click="onClick(number)"
       >Buscar</button>
     </div>
     <LocationList :items="items" />
