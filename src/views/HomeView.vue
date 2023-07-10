@@ -7,17 +7,6 @@
 
   const number = ref(44733)
 
-  async function onClick() {
-    console.log(number.value);
-    
-    const response = await fetch(`.netlify/functions/number?number=${number.value.toString().padStart(5, '0')}`)
-    const data = await response.json()
-
-    let items: Array<Location> = data.locations;
-    items = items.map(x => new Location(x.name, x.address, x.city, x.province, x.series))
-               .sort((a: Location, b:Location) => b.series.length - a.series.length)
-  }
-
   const response = await fetch(`.netlify/functions/number?number=${number.value}`)
 
   const data = await response.json()
@@ -25,6 +14,18 @@
   let items: Array<Location> = data.locations;
   items = items.map(x => new Location(x.name, x.address, x.city, x.province, x.series))
                .sort((a: Location, b:Location) => b.series.length - a.series.length)
+
+  async function onClick() {
+    console.log(number.value);
+    
+    const response = await fetch(`.netlify/functions/number?number=${number.value.toString().padStart(5, '0')}`)
+    const data = await response.json()
+
+    const d: Array<Location> = data.locations;
+
+    items = d.map(x => new Location(x.name, x.address, x.city, x.province, x.series))
+             .sort((a: Location, b:Location) => b.series.length - a.series.length)
+  }
 
 </script>
 
