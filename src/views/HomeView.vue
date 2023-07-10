@@ -30,9 +30,6 @@
 
     locations.items = items;
 
-    number++;
-    number--;
-
     console.log(locations)
   }
 
