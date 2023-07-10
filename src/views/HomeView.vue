@@ -6,9 +6,8 @@
 
   const number = ref(44733)
 
-  const locations = reactive(new Array<Location>);
+  const locations = reactive({items: new Array<Location>});
 
-  
   const response = await fetch(`.netlify/functions/number?number=${number.value}`)
   const data = await response.json()
 
@@ -16,7 +15,7 @@
   items = items.map(x => new Location(x.name, x.address, x.city, x.province, x.series))
                .sort((a: Location, b:Location) => b.series.length - a.series.length)
 
-  locations.push(...items)
+  locations.items = items;
 
   async function onClick() {
     console.log(number.value);
@@ -29,7 +28,7 @@
     items = d.map(x => new Location(x.name, x.address, x.city, x.province, x.series))
              .sort((a: Location, b:Location) => b.series.length - a.series.length)
 
-    Object.assign(locations, items)
+    locations.items = items;
 
     console.log(locations)
   }
