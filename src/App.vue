@@ -6,6 +6,13 @@ import NavBar from './components/NavBar.vue'
 <template>
   <section class="h-full bg-yellow-50">
     <NavBar/>
-    <RouterView class="h-full bg-yellow-50" />
+    <Suspense class="h-full bg-yellow-50">
+      <template #default>
+        <RouterView class="h-full bg-yellow-50" />
+      </template>
+      <template #fallback>
+        Loading...
+      </template>
+    </Suspense>
   </section>
 </template>
