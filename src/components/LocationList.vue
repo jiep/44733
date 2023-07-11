@@ -10,7 +10,7 @@ defineProps<{
 
 <template>
     <section class="h-full overflow-y-auto md:mx-auto">
-        <div class="m-4" v-for="item in items">  
+        <div class="mx-4 my-2" v-for="item in items">  
             <LocationItem :location="item" />
         </div>
     </section>
