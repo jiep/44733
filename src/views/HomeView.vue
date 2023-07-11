@@ -1,13 +1,23 @@
 <script setup lang="ts">
-  import { reactive, ref } from 'vue'
+  import { computed, reactive, ref } from 'vue'
 
   import LocationList from '@/components/LocationList.vue'
   import PrimosAdri from '@/components/PrimosAdri.vue'
+  import Stats from '@/components/Stats.vue'
   import { Location }from '@/model/Location'
 
   const number = ref(44733)
 
   const locations = reactive({items: new Array<Location>});
+
+  const stats = computed(() => {
+    return {
+      locations: locations.items.length,
+      provinces: new Set(locations.items.map(x => x.province)).size,
+      cities: new Set(locations.items.map(x => x.city)).size,
+      series: locations.items.map(x => x.series).reduce((a, b) => a + +b, 0)
+    }
+  });
 
   async function onClick(number: any) {
     console.log(number);
@@ -45,5 +55,6 @@
       >Buscar</button>
     </div>
     <PrimosAdri @selectedPrimoAdri="onSelectedPrimoAdri" />
+    <Stats :locations="stats.locations" :provinces="stats.provinces" :cities="stats.cities" :series="stats.series" />
     <LocationList :items="locations.items" />
 </template>
