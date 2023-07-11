@@ -27,7 +27,7 @@
 
   function onSelectedPrimoAdri(e: number) {
     number.value = e
-    onClick(number)
+    onClick(number.value)
   }
 
   onClick(number.value)
