@@ -15,9 +15,9 @@ function selectedPrimoAdri(primoAdri: number) {
 </script>
 
 <template>
-    <div class="m-4 flex flex-row overflow-x-auto">
-        <div class="flex flex-row items-center">
-            <span class="w-32 mr-2">Primos de Adri -></span>
+    <div class="m-4 flex flex-col justify-center">
+        <span class="w-32 mr-2">Primos de Adri -></span>
+        <div class="flex flex-row items-center overflow-x-auto">
             <ul class="flex flex-row last:mr-0" v-for="(p, i) in primosAdri">
                 <li :id="i.toString()" class="flex bg-red-300 px-2 py-1 rounded mr-2 hover:cursor-pointer hover:bg-red-400" @click="selectedPrimoAdri(p)">
                     {{p}}

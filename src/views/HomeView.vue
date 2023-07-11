@@ -55,6 +55,6 @@
       >Buscar</button>
     </div>
     <PrimosAdri @selectedPrimoAdri="onSelectedPrimoAdri" />
-    <Stats :locations="stats.locations" :provinces="stats.provinces" :cities="stats.cities" :series="stats.series" />
+    <Stats :lottery_number="number" :locations="stats.locations" :provinces="stats.provinces" :cities="stats.cities" :series="stats.series" />
     <LocationList :items="locations.items" />
 </template>
