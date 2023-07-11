@@ -30,7 +30,7 @@
     onClick(number)
   }
 
-  onClick(number)
+  onClick(number.value)
 
 </script>
 
