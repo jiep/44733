@@ -35,7 +35,6 @@
 </script>
 
 <template>
-    <!-- <Tabs /> -->
     <div class="flex m-4 pt-0 items-center">
       <input type="number" min="0" max="100000"
         placeholder="Introduce un número para buscar" 
