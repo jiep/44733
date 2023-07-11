@@ -15,7 +15,7 @@
       locations: locations.items.length,
       provinces: new Set(locations.items.map(x => x.province)).size,
       cities: new Set(locations.items.map(x => x.city)).size,
-      series: locations.items.map(x => x.series).reduce((a, b) => a + +b, 0)
+      series: locations.items.map(x => x.series.length).reduce((a, b) => a + b, 0)
     }
   });
 
