@@ -29,7 +29,7 @@
     const response = await fetch(`.netlify/functions/number?number=${number.toString().padStart(5, '0')}`)
     const data = await response.json()
 
-    let items: Array<Location> = data.locations;
+    let items: Array<Location> = data.locations
 
     items = items.map(x => new Location(x.name, x.address, x.city, x.province, x.series))
              .sort((a: Location, b:Location) => b.series.length - a.series.length)
@@ -62,5 +62,5 @@
     </div>
     <PrimosAdri @selectedPrimoAdri="onSelectedPrimoAdri" />
     <Stats :lottery_number="number" :locations="stats.locations" :provinces="stats.provinces" :cities="stats.cities" :series="stats.series" :isLoading="isLoading" />
-    <LocationList :items="locations.items" />
+    <LocationList :items="locations.items" :isLoading="isLoading" />
 </template>
