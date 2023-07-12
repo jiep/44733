@@ -21,7 +21,7 @@
                         <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
                             <h3 class="text-sm leading-6 font-medium text-gray-400">Número</h3>
                             <template v-if="!isLoading">
-                                <p class="text-3xl font-bold text-yellow-700">{{ lottery_number }}</p>
+                                <p class="text-3xl font-bold text-yellow-700">{{ lottery_number.toString().padStart(5, "0") }}</p>
                             </template>
                             <template v-else>
                                 <Loading :isLoading="isLoading"/>
