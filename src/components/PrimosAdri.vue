@@ -19,7 +19,7 @@ function selectedPrimoAdri(primoAdri: number) {
         <div class="flex flex-row items-center overflow-x-auto">
             <ul class="flex flex-row">
                 <template v-for="(p, i) in primosAdri">
-                    <li :id="i.toString()" class="text-yellow-700 font-bold flex border border-yellow-500 bg-white p-1 mr-2 hover:cursor-pointer hover:bg-yellow-200" :class="{ 'mr-0': i == primosAdri.length - 1 }" @click="selectedPrimoAdri(p)">
+                    <li :id="i.toString()" class="text-yellow-700 font-bold flex border border-yellow-500 bg-white p-1 mr-2 hover:cursor-pointer hover:bg-yellow-200 last:mr-0" @click="selectedPrimoAdri(p)">
                         {{p}}
                     </li>
                 </template>
