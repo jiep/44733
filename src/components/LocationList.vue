@@ -9,8 +9,8 @@ defineProps<{
 </script>
 
 <template>
-    <section class="h-full overflow-y-auto md:mx-auto">
-        <div class="mx-4 my-2" v-for="item in items">  
+    <section class="flex flex-col md:mx-auto h-full overflow-y-auto">
+        <div class="mx-4 my-1 last:mb-4" v-for="item in items">  
             <LocationItem :location="item" />
         </div>
     </section>

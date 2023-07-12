@@ -1,10 +1,14 @@
 <script setup lang="ts">
+
+    import Loading from '@/components/Loading.vue'
+
     const _ = defineProps<{
         lottery_number: number
         locations: number,
         provinces: number,
         cities: number,
-        series: number
+        series: number,
+        isLoading: boolean
     }>()
 </script>
 
@@ -21,42 +25,62 @@
                     </div>
                 </div>
             </div>
-            <div class="inline-block align-bottom bg-white text-left overflow-hidden border border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
+            <div class="inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
                 <div class="bg-white p-2">
                     <div class="sm:flex sm:items-start">
                         <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
                             <h3 class="text-sm leading-6 font-medium text-gray-400">Localizaciones</h3>
-                            <p class="text-3xl font-bold text-yellow-700">{{ locations }}</p>
+                            <template v-if="isLoading">
+                                <p class="text-3xl font-bold text-yellow-700">{{ locations }}</p>
+                            </template>
+                            <template v-else>
+                                <Loading :isLoading="isLoading"/>
+                            </template>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="inline-block align-bottom bg-white text-left overflow-hidden border border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
+            <div class="inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
                 <div class="bg-white p-2">
                     <div class="sm:flex sm:items-start">
                         <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
                             <h3 class="text-sm leading-6 font-medium text-gray-400">Provincias</h3>
-                            <p class="text-3xl font-bold text-yellow-700">{{ provinces }}</p>
+                            <template v-if="isLoading">
+                                <p class="text-3xl font-bold text-yellow-700">{{ provinces }}</p>
+                            </template>
+                            <template v-else>
+                                <Loading :isLoading="isLoading"/>
+                            </template>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="inline-block align-bottom bg-white text-left overflow-hidden border border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
+            <div class="inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
                 <div class="bg-white p-2">
                     <div class="sm:flex sm:items-start">
                         <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
                             <h3 class="text-sm leading-6 font-medium text-gray-400">Ciudades</h3>
-                            <p class="text-3xl font-bold text-yellow-700">{{ cities }}</p>
+                            <template v-if="isLoading">
+                                <p class="text-3xl font-bold text-yellow-700">{{ cities }}</p>
+                            </template>
+                            <template v-else>
+                                <Loading :isLoading="isLoading"/>
+                            </template>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="inline-block align-bottom bg-white text-left overflow-hidden border border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
+            <div class="inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
                 <div class="bg-white p-2">
                     <div class="sm:flex sm:items-start">
                         <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
                             <h3 class="text-sm leading-6 font-medium text-gray-400">Series totales</h3>
-                            <p class="text-3xl font-bold text-yellow-700"> {{ series }}</p>
+                            <template v-if="isLoading">
+                                <p class="text-3xl font-bold text-yellow-700"> {{ series }}</p>
+                            </template>
+                            <template v-else>
+                                <Loading :isLoading="isLoading"/>
+                            </template>
                         </div>
                     </div>
                 </div>
