@@ -52,7 +52,7 @@
 
 <template>
     <div class="flex m-4 pt-0 items-center">
-      <input type="number" min="0" max="100000"
+      <input type="number" min="0" max="100000" onkeyup="if(value<0) value=0; if(value>100000) value=99999;"
         placeholder="Introduce un número para buscar" 
         class="border border-yellow-600 px-3 py-3 placeholder-slate-400 text-slate-600 relative bg-white text-sm outline-none focus:outline-none focus:ring w-full" 
         v-model="number" 
