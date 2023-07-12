@@ -13,7 +13,7 @@ defineProps<{
 
 <template>
     <section class="flex flex-col h-full overflow-y-auto">
-        <div class="my-1  mx-4 last:mb-4" v-for="item in items">  
+        <div class="my-1  mx-4 last:mb-4" v-for="item in items" v-if="!isLoading">  
             <LocationItem :location="item" />
         </div>
         <template v-if="items.length == 0 && !isLoading">
