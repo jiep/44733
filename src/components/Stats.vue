@@ -15,7 +15,7 @@
 <template>
     <div class="max-w-full mx-4">
         <div class="sm:flex sm:space-x-4">
-            <div class="inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
+            <div class="mb-2 inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
                 <div class="bg-white p-2">
                     <div class="sm:flex sm:items-start">
                         <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </div>
-            <div class="inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
+            <div class="mb-2 inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
                 <div class="bg-white p-2">
                     <div class="sm:flex sm:items-start">
                         <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <div class="inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
+            <div class="mb-2 inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
                 <div class="bg-white p-2">
                     <div class="sm:flex sm:items-start">
                         <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
@@ -60,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div class="inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
+            <div class="mb-2 inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
                 <div class="bg-white p-2">
                     <div class="sm:flex sm:items-start">
                         <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
@@ -75,7 +75,7 @@
                     </div>
                 </div>
             </div>
-            <div class="inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
+            <div class="mb-2 inline-block align-bottom bg-white text-left overflow-hidden border border-yellow-500 border-t-4 border-t-yellow-500 transform transition-all w-full sm:w-1/3 sm:my-8">
                 <div class="bg-white p-2">
                     <div class="sm:flex sm:items-start">
                         <div class="text-center sm:mt-0 sm:ml-2 sm:text-left">
