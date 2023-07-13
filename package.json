@@ -1,7 +1,6 @@
 {
   "name": "44733",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite --host",
     "build": "run-p type-check build-only",
