@@ -4,11 +4,11 @@ import NavBar from './components/NavBar.vue'
 </script>
 
 <template>
-  <section class="h-full bg-yellow-50">
-    <NavBar/>
-    <Suspense class="h-full bg-yellow-50">
+  <section class="flex flex-col min-h-full bg-yellow-50">
+    <NavBar class="sticky top-0 z-50"/>
+    <Suspense>
       <template #default>
-        <RouterView class="h-full bg-yellow-50" />
+        <RouterView />
       </template>
       <template #fallback>
         Loading...
