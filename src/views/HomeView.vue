@@ -51,6 +51,7 @@
 </script>
 
 <template>
+  <div class="overflow-y-auto">
     <div class="flex m-4 pt-0 items-center">
       <input type="number" min="0" max="100000" onkeyup="if(value<0) value=0; if(value>100000) value=99999;"
         placeholder="Introduce un número para buscar" 
@@ -62,5 +63,6 @@
     </div>
     <PrimosAdri @selectedPrimoAdri="onSelectedPrimoAdri" />
     <Stats :lottery_number="number" :locations="stats.locations" :provinces="stats.provinces" :cities="stats.cities" :series="stats.series" :isLoading="isLoading" />
-    <LocationList :items="locations.items" :isLoading="isLoading" />
+    <LocationList class="mt-2" :items="locations.items" :isLoading="isLoading" />
+  </div>
 </template>

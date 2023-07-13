@@ -12,7 +12,7 @@ defineProps<{
 </script>
 
 <template>
-    <section class="flex flex-col h-full overflow-y-auto">
+    <section class="flex flex-col">
         <template v-if="items.length == 0 && !isLoading">
             <div class="flex flex-col items-center justify-center h-full">
                 <p class="flex align-middle mx-4 h-full text-gray-400 font-medium">No se encontró ninguna localización para el número solicitado</p>
