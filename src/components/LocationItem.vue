@@ -23,7 +23,7 @@ const googleMapsEncoded = computed(() => {
         <a :href="googleMapsEncoded" target="_blank" class="flex w-full">
             <div class="flex flex-col w-full">
                 <div class="flex items-center justify-between w-auto">
-                    <p class="flex text-lg font-semibold text-yellow-700">
+                    <p class="flex truncate text-lg font-semibold text-yellow-700 mr-2">
                         <template v-if="location.name">
                             {{ location.name }}
                         </template>
@@ -31,13 +31,13 @@ const googleMapsEncoded = computed(() => {
                             Sin nombre :(
                         </template>
                     </p>
-                    <div class="flex truncate text-sm font-medium text-gray-500">
+                    <div class="flex text-sm font-medium text-gray-500">
                         <p class="mr-1 font-bold" :class="styles.color">{{location.series.length}}</p>
                         <p>series</p>
                     </div>
                 </div>
-                <div class="flex items-center justify-between w-auto">
-                    <div class="flex truncate text-base font-medium text-gray-600">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between w-auto">
+                    <div class="flex truncate text-base font-medium text-gray-600 sm:mr-4">
                         <div class="text-pink-500">
                             {{location.city}}
                         </div>
@@ -46,7 +46,7 @@ const googleMapsEncoded = computed(() => {
                             {{location.province}}
                         </div>
                     </div>
-                    <div class="flex mb-1 truncate text-xs text-gray-600 break-all">
+                    <div class="flex truncate text-xs text-gray-600 break-all">
                         {{location.address}}
                     </div>
                 </div>
