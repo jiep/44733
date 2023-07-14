@@ -5,7 +5,7 @@ import NavBar from './components/NavBar.vue'
 
 <template>
   <section class="flex flex-col min-h-full bg-yellow-50">
-    <NavBar class="sticky top-0 z-50" />
+    <NavBar />
     <Suspense>
       <template #default>
         <RouterView />
