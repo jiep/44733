@@ -11,7 +11,7 @@ const router = createRouter({
     },
     {
       path: '/*',
-      redirect: "/"
+      redirect: '/'
     }
   ]
 })
