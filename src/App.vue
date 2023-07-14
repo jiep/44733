@@ -4,8 +4,8 @@ import NavBar from './components/NavBar.vue'
 </script>
 
 <template>
-  <section class="flex flex-col min-h-full bg-yellow-50">
-    <NavBar />
+  <NavBar />
+  <section class="flex flex-col h-full bg-yellow-50">
     <Suspense>
       <template #default>
         <RouterView />
