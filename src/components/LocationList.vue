@@ -11,7 +11,7 @@ defineProps<{
 </script>
 
 <template>
-  <section class="flex flex-col">
+  <section class="flex flex-col h-full">
     <template v-if="items.length == 0 && !isLoading">
       <div class="flex flex-col items-center justify-center h-full">
         <p class="flex align-middle mx-4 h-full text-gray-400 font-medium">
@@ -27,7 +27,7 @@ defineProps<{
         </p>
       </div>
     </template>
-    <div v-if="!isLoading">
+    <div class="h-full" v-if="!isLoading">
       <div :key="i" class="my-1 mx-4 last:mb-4" v-for="(item, i) in items">
         <LocationItem :location="item" />
       </div>
