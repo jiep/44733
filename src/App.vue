@@ -4,7 +4,7 @@ import NavBar from './components/NavBar.vue'
 </script>
 
 <template>
-  <NavBar class="sticky top-0 z-50" />
+  <NavBar />
   <section class="flex flex-col h-full bg-yellow-50">
     <Suspense>
       <template #default>
