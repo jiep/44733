@@ -58,7 +58,7 @@ onClick(number.value)
 </script>
 
 <template>
-  <div class="h-full overflow-y-auto">
+  <div class="h-full">
     <div class="flex m-4 pt-0 items-center">
       <input
         type="number"
