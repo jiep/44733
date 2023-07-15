@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npm run build && echo $DRAW_ID"
   functions = "netlify/functions"
   publish = "dist"
 
