@@ -3,6 +3,7 @@ use aws_lambda_events::encodings::Body;
 use http::header::HeaderMap;
 use lambda_runtime::{handler_fn, Context, Error};
 use log::LevelFilter;
+use std::env;
 use simple_logger::SimpleLogger;
 use lottery::{finder::lottery::Lottery};
 
@@ -17,6 +18,10 @@ async fn main() -> Result<(), Error> {
 
 pub(crate) async fn my_handler(event: ApiGatewayProxyRequest, _ctx: Context) -> Result<ApiGatewayProxyResponse, Error> {
     let url: &str = "https://www.loteriasyapuestas.es/new-geo-web/JsonGenerationServlet/exportPois.txt?drawId=1222809102&number=";
+
+    let env_var = env::var("DRAW_ID").is_ok();
+
+    log::warn!("Env var is set: {}", env_var);
 
     let number: u32 = event
         .query_string_parameters.first("number").unwrap_or("00000").parse::<u32>().unwrap();
