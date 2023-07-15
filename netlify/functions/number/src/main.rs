@@ -17,11 +17,17 @@ async fn main() -> Result<(), Error> {
 }
 
 pub(crate) async fn my_handler(event: ApiGatewayProxyRequest, _ctx: Context) -> Result<ApiGatewayProxyResponse, Error> {
-    let url: &str = "https://www.loteriasyapuestas.es/new-geo-web/JsonGenerationServlet/exportPois.txt?drawId=1222809102&number=";
 
     let env_var = env::var("DRAW_ID").is_ok();
 
+    let draw_id = match env::var("DRAW_ID") {
+        Ok(v) => v,
+        Err(_) => String::from("1222809102")
+    };
+
     log::warn!("Env var is set: {}", env_var);
+
+    let url = format!("https://www.loteriasyapuestas.es/new-geo-web/JsonGenerationServlet/exportPois.txt?drawId={}&number=", draw_id);
 
     let number: u32 = event
         .query_string_parameters.first("number").unwrap_or("00000").parse::<u32>().unwrap();
