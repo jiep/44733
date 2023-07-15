@@ -29,6 +29,8 @@ pub(crate) async fn my_handler(event: ApiGatewayProxyRequest, _ctx: Context) -> 
 
     let url = format!("https://www.loteriasyapuestas.es/new-geo-web/JsonGenerationServlet/exportPois.txt?drawId={}&number=", draw_id);
 
+    log::warn!("url: {}", url);
+
     let number: u32 = event
         .query_string_parameters.first("number").unwrap_or("00000").parse::<u32>().unwrap();
 
