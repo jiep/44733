@@ -42,7 +42,7 @@ pub(crate) async fn my_handler(event: ApiGatewayProxyRequest, _ctx: Context) -> 
         headers: HeaderMap::new(),
         multi_value_headers: HeaderMap::new(),
         body: Some(Body::Text(String::from(r))),
-        is_base64_encoded: false,
+        is_base64_encoded: Some(false),
     };
 
     Ok(resp)
