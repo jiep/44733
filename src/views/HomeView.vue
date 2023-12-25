@@ -21,7 +21,7 @@ const stats = computed(() => {
   }
 })
 
-async function onClick(number: any) {s
+async function onClick(number: any) {
   isLoading.value = true
 
   const response = await fetch(
