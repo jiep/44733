@@ -22,8 +22,6 @@ const stats = computed(() => {
 })
 
 async function onClick(number: any) {
-  console.log(number)
-
   isLoading.value = true
 
   const response = await fetch(
@@ -40,8 +38,6 @@ async function onClick(number: any) {
   locations.items = items
 
   isLoading.value = false
-
-  console.log(locations)
 }
 
 function onSelectedPrimoAdri(e: number) {
