@@ -14,7 +14,6 @@ const primosAdri = ref(pa)
 const emit = defineEmits(['selectedPrimoAdri'])
 
 function selectedPrimoAdri(primoAdri: number) {
-  console.log(primoAdri)
   emit('selectedPrimoAdri', primoAdri)
 }
 </script>
