@@ -18,23 +18,22 @@ async fn main() -> Result<(), Error> {
 
 pub(crate) async fn my_handler(event: ApiGatewayProxyRequest, _ctx: Context) -> Result<ApiGatewayProxyResponse, Error> {
 
+    const DEFAULT_DRAW_ID: u32 = 1222809102;
+
     let env_var = env::var("DRAW_ID").is_ok();
     log::warn!("Env var is set: {}", env_var);
 
-    let draw_id = match env::var("DRAW_ID") {
-        Ok(v) => v,
-        Err(_) => String::from("1222809102")
+    let draw_id: u32 = match env::var("DRAW_ID") {
+        Ok(v) => v.parse::<u32>().unwrap(),
+        Err(_) => DEFAULT_DRAW_ID
     };
 
-    let url = format!("https://www.loteriasyapuestas.es/new-geo-web/JsonGenerationServlet/exportPois.txt?drawId={}&number=", draw_id);
-
-    log::warn!("url: {}", url);
     log::warn!("draw_id: {}", draw_id);
 
     let number: u32 = event
         .query_string_parameters.first("number").unwrap_or("00000").parse::<u32>().unwrap();
 
-    let lottery = Lottery::load_from_url(url.as_ref(), number).unwrap();
+    let lottery = Lottery::load_from_draw_id(draw_id, number).unwrap();
     let r = lottery.parse_to_json().unwrap();
 
     let resp = ApiGatewayProxyResponse {
