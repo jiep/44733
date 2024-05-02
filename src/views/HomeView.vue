@@ -57,6 +57,7 @@ onClick(number.value)
   <div class="h-full">
     <div class="flex m-4 pt-0 items-center">
       <input
+        id="number"
         type="number"
         min="0"
         max="99999"
