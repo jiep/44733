@@ -1,6 +1,6 @@
 {
   "name": "44733",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "scripts": {
     "dev": "vite --host",
     "build": "run-p lint format type-check build-only",
