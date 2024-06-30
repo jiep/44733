@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: cargo
-    directory: "/netlify/functions/"
+    directory: "/netlify/functions/number"
     schedule:
       interval: daily
       time: "04:00"
