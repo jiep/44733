@@ -5,8 +5,7 @@
     "vitest.config.*",
     "cypress.config.*",
     "nightwatch.conf.*",
-    "playwright.config.*", 
-    "vite.config.mts"  
+    "playwright.config.*"
   ],
   "compilerOptions": {
     "composite": true,
