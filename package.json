@@ -1,6 +1,5 @@
 {
   "name": "44733",
-  "type": "module",
   "version": "1.0.12",
   "scripts": {
     "dev": "vite --host",
