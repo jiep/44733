@@ -6,24 +6,13 @@
   <img src="src/assets/logo.png" width="20%" />
 </p>
 
-## Recommended IDE Setup
+> 44733 is a web app designed to facilitate the location for Spanish "Loteria de Navidad" lottery numbers. This application allows users to quickly check where number are sold.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Usage
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+1. Open your browser and navigate to https://44733.netlify.app/.
+2. Enter the lottery number you want to search for in the search bar.
+3. Click the "Buscar" (Search) button to see the results.
 
 ## Project Setup
 
@@ -48,3 +37,17 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## Contributions
+
+Contributions are welcome! If you want to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/new-feature`).
+3. Make your changes and commit them (`git commit -m 'Add new feature'`).
+4. Push your changes to the branch (`git push origin feature/new-feature`).
+5. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License. For more details, see the [LICENSE](./LICENSE) file.
