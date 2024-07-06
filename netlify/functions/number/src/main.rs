@@ -1,7 +1,7 @@
 use aws_lambda_events::event::apigw::{ApiGatewayProxyRequest, ApiGatewayProxyResponse};
 use aws_lambda_events::encodings::Body;
 use http::header::HeaderMap;
-use lambda_runtime::{handler_fn, Context, Error};
+use lambda_runtime::{service_fn, Error, LambdaEvent};
 use log::LevelFilter;
 use std::env;
 use simple_logger::SimpleLogger;
@@ -10,13 +10,14 @@ use lottery::{finder::lottery::Lottery};
 #[tokio::main]
 async fn main() -> Result<(), Error> {
     SimpleLogger::new().with_utc_timestamps().with_level(LevelFilter::Info).init().unwrap();
-
-    let func = handler_fn(my_handler);
+    let func = service_fn(func);
     lambda_runtime::run(func).await?;
     Ok(())
 }
 
-pub(crate) async fn my_handler(event: ApiGatewayProxyRequest, _ctx: Context) -> Result<ApiGatewayProxyResponse, Error> {
+pub(crate) async fn func(event: LambdaEvent<ApiGatewayProxyRequest>) -> Result<ApiGatewayProxyResponse, Error> {
+
+    let (event, _context) = event.into_parts();
 
     const DEFAULT_DRAW_ID: u32 = 1222809102;
 
