@@ -12,3 +12,6 @@
   command = "npm run dev"
   framework = "vite"
   targetPort = 5173
+
+[context.production]
+environment = { NETLIFY_EXPERIMENTAL_BUILD_RUST_SOURCE = "true" }

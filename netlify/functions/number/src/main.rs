@@ -1,6 +1,6 @@
 use aws_lambda_events::encodings::Body;
 use aws_lambda_events::event::apigw::{ApiGatewayProxyRequest, ApiGatewayProxyResponse};
-use http::header::HeaderMap;
+use aws_lambda_events::http::HeaderMap;
 use lambda_runtime::{service_fn, Error, LambdaEvent};
 use log::LevelFilter;
 use lottery::finder::lottery::Lottery;
@@ -54,7 +54,7 @@ pub(crate) async fn func(
         headers: HeaderMap::new(),
         multi_value_headers: HeaderMap::new(),
         body: Some(Body::Text(r)),
-        is_base64_encoded: Some(false),
+        is_base64_encoded: false,
     };
 
     Ok(resp)
