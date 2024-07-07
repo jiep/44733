@@ -1,6 +1,6 @@
 use aws_lambda_events::encodings::Body;
 use aws_lambda_events::event::apigw::{ApiGatewayProxyRequest, ApiGatewayProxyResponse};
-use http::header::HeaderMap;
+use aws_lambda_events::http::HeaderMap;
 use lambda_runtime::{service_fn, Error, LambdaEvent};
 use log::LevelFilter;
 use lottery::finder::lottery::Lottery;
