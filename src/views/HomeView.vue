@@ -5,6 +5,7 @@ import LocationList from '@/components/LocationList.vue'
 import PrimosAdri from '@/components/PrimosAdri.vue'
 import StatsPanel from '@/components/StatsPanel.vue'
 import { Location } from '@/model/Location'
+import { parseContent } from '@/utils/parser'
 
 const number = ref(44733)
 
@@ -24,16 +25,13 @@ const stats = computed(() => {
 async function onClick(number: any) {
   isLoading.value = true
 
-  const response = await fetch(
-    `.netlify/functions/number?number=${number.toString().padStart(5, '0')}`
+  const response = await fetch('/44733')
+
+  const data = await response.text()
+
+  let items = parseContent(data).sort(
+    (a: Location, b: Location) => b.series.length - a.series.length
   )
-  const data = await response.json()
-
-  let items: Array<Location> = data.locations
-
-  items = items
-    .map((x) => new Location(x.name, x.address, x.city, x.province, x.series))
-    .sort((a: Location, b: Location) => b.series.length - a.series.length)
 
   locations.items = items
 
@@ -74,7 +72,7 @@ onClick(number.value)
         Buscar
       </button>
     </div>
-    <PrimosAdri @selectedPrimoAdri="onSelectedPrimoAdri" />
+    <!-- <PrimosAdri @selectedPrimoAdri="onSelectedPrimoAdri" /> -->
     <StatsPanel
       :lottery_number="number"
       :locations="stats.locations"
