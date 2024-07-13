@@ -14,7 +14,9 @@ const styles = computed(() => {
 
 const googleMapsEncoded = computed(() => {
   return encodeURI(
-    `https://www.google.es/maps/place/${props.location.address}, ${props.location.city}, ${props.location.province}`
+    `https://www.google.es/maps/place/${props.location.address},
+    ${props.location.city},
+    ${props.location.province}`
   )
 })
 </script>

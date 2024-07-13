@@ -14,9 +14,17 @@ defineProps<{
   <section class="flex flex-col">
     <template v-if="items.length == 0 && !isLoading">
       <div class="flex flex-col items-center justify-center h-full">
-        <p class="flex align-middle mx-4 h-full text-gray-400 font-medium">
-          No se encontró ninguna localización para el número solicitado
-        </p>
+        <div class="flex align-middle mx-4 h-full text-gray-400 font-medium">
+          Descarga el fichero de localizaciones desde la web de
+          <a
+            class="text-pink-500 font-bold"
+            href="https://www.loteriasyapuestas.es/es/buscar-decimo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            &nbsp;Loterías y Apuestas del Estado
+          </a>
+        </div>
       </div>
     </template>
     <template v-if="isLoading">

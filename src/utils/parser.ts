@@ -1,9 +1,11 @@
 import { Location } from '@/model/Location'
 
-export function parseContent(content: string): Location[] {
+export function parseContent(content: string): Location[] | undefined {
   const lines = content.split('\n')
   const locations: Location[] = []
   let location: Location = new Location('', '', '', '', [], '')
+
+  if (!content) return
 
   for (let line of lines) {
     line = line.trim()
