@@ -12,7 +12,10 @@
 
 <details>
   <summary>View web version</summary>
-  ![44733 mobile preview](./docs/img/screenshot-mobile.png)
+
+  <p align="center">
+    <img width="33%" src="./docs/img/screenshot-mobile.png">
+  </p>
 </details>
 
 ## Usage
