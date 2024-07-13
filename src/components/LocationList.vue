@@ -15,7 +15,7 @@ defineProps<{
     <template v-if="items.length == 0 && !isLoading">
       <div class="flex flex-col items-center justify-center h-full">
         <div class="flex flex-col align-middle text-center mx-4 h-full text-gray-400 font-medium">
-          <p>Descarga el fichero de localizaciones desde la web de</p>
+          <p>Descarga los ficheros de localizaciones desde la web de</p>
           <a
             class="text-pink-500 font-bold"
             href="https://www.loteriasyapuestas.es/es/buscar-decimo"

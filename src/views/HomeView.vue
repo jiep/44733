@@ -21,7 +21,9 @@ const stats = computed(() => {
     locations: locations.items.length,
     provinces: new Set(locations.items.map((x) => x.province)).size,
     cities: new Set(locations.items.map((x) => x.city)).size,
-    series: locations.items.map((x) => x.series.length).reduce((a, b) => a + b, 0)
+    series: locations.items
+      .map((x) => x.series.length)
+      .reduce((a, b) => a + b, 0)
   }
 })
 
@@ -60,11 +62,13 @@ const handleFileUpload = async () => {
         <input type="file" id="file_input" hidden @change="handleFileUpload()" ref="file" />
         <label
           for="file_input"
-          class="border border-pink-500 bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 hover:bg-pink-600 outline-none focus:outline-none ease-linear transition-all duration-150"
+          class="border border-pink-500 bg-pink-500 text-white active:bg-pink-600 font-bold 
+          uppercase text-sm px-6 py-3 hover:bg-pink-600 outline-none focus:outline-none ease-linear 
+          transition-all duration-150 text-center"
         >
           Subir fichero
         </label>
-        <label class="flex-1 text-sm text-slate-500 p-3 bg-white w-full">{{ filename }}</label>
+        <label class="md:flex-1 flex-auto text-sm text-slate-500 p-3 bg-white w-full">{{ filename }}</label>
       </div>
     </form>
 
