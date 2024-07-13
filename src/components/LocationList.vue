@@ -14,15 +14,15 @@ defineProps<{
   <section class="flex flex-col">
     <template v-if="items.length == 0 && !isLoading">
       <div class="flex flex-col items-center justify-center h-full">
-        <div class="flex align-middle mx-4 h-full text-gray-400 font-medium">
-          Descarga el fichero de localizaciones desde la web de
+        <div class="flex flex-col align-middle text-center mx-4 h-full text-gray-400 font-medium">
+          <p>Descarga el fichero de localizaciones desde la web de</p>
           <a
             class="text-pink-500 font-bold"
             href="https://www.loteriasyapuestas.es/es/buscar-decimo"
             target="_blank"
             rel="noopener noreferrer"
           >
-            &nbsp;Loterías y Apuestas del Estado
+            Loterías y Apuestas del Estado
           </a>
         </div>
       </div>

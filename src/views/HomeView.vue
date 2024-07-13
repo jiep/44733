@@ -6,10 +6,12 @@ import StatsPanel from '@/components/StatsPanel.vue'
 import { Location } from '@/model/Location'
 import { parseContent } from '@/utils/parser'
 
+const DEFAULT_FILENAME = 'Ningún fichero de localizaciones seleccionado'
+
 const number = ref(44733)
 
 const file = ref(undefined)
-const filename = ref('Ningún fichero de localizaciones seleccionado')
+const filename = ref(DEFAULT_FILENAME)
 
 const isLoading = ref(false)
 const visible = ref(false)
@@ -48,6 +50,7 @@ const handleFileUpload = async () => {
   } catch (error) {
     isLoading.value = false
     visible.value = false
+    filename.value = DEFAULT_FILENAME
   }
 }
 </script>
