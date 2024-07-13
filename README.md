@@ -10,6 +10,11 @@
 
 ![44733 preview](./docs/img/screenshot.png)
 
+<details>
+  <summary>View web version</summary>
+  ![44733 mobile preview](./docs/img/screenshot-mobile.png)
+</details>
+
 ## Usage
 
 1. Open your browser and navigate to https://44733.netlify.app/.
