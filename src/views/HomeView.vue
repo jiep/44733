@@ -71,7 +71,6 @@ const handleFileUpload = async () => {
     </form>
 
     <StatsPanel
-      :lottery_number="number"
       :locations="stats.locations"
       :provinces="stats.provinces"
       :cities="stats.cities"
