@@ -6,7 +6,9 @@
   <img src="src/assets/logo.png" width="20%" />
 </p>
 
-> 44733 is a web app designed to facilitate the location for Spanish "Loteria de Navidad" lottery numbers. This application allows users to quickly check where number are sold.
+> 44733 is a web app designed to facilitate the parsing of Spanish "Loteria de Navidad" lottery numbers files. This application allows users to quickly visualize where number are sold.
+
+![44733 preview](./docs/img/screenshot.png)
 
 ## Usage
 
