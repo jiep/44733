@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
+import Phone from '@/components/Phone.vue'
+
 import { Location } from '@/model/Location'
 import { getColor } from '@/utils/utils'
 
@@ -19,11 +21,15 @@ const googleMapsEncoded = computed(() => {
     ${props.location.province}`
   )
 })
+
+const phoneHref = computed(() => {
+  return `tel:${props.location.phone}`
+})
 </script>
 
 <template>
   <div
-    class="px-4 py-2 border border-l-4 bg-white hover:bg-yellow-100 w-full"
+    class="px-4 py-2 border border-l-4 bg-white hover:bg-yellow-100 w-full flex flex-row items-center"
     :class="styles.border"
   >
     <a :href="googleMapsEncoded" target="_blank" class="flex w-full">
@@ -55,6 +61,9 @@ const googleMapsEncoded = computed(() => {
           </div>
         </div>
       </div>
+    </a>
+    <a class="flex flex-auto ml-4" :href="phoneHref">
+      <Phone class="fill-pink-500 active:fill-pink-600 hover:fill-pink-600 outline-none focus:outline-none"/>
     </a>
   </div>
 </template>
