@@ -1,8 +1,3 @@
-[build]
-  command = "npm run build && echo $DRAW_ID"
-  functions = "netlify/functions"
-  publish = "dist"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -12,6 +7,3 @@
   command = "npm run dev"
   framework = "vite"
   targetPort = 5173
-
-[context.production]
-environment = { NETLIFY_EXPERIMENTAL_BUILD_RUST_SOURCE = "true" }

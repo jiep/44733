@@ -6,13 +6,23 @@
   <img src="src/assets/logo.png" width="20%" />
 </p>
 
-> 44733 is a web app designed to facilitate the location for Spanish "Loteria de Navidad" lottery numbers. This application allows users to quickly check where number are sold.
+> 44733 is a web app designed to facilitate the parsing of Spanish "Loteria de Navidad" lottery numbers files. This application allows users to quickly visualize where number are sold.
+
+![44733 preview](./docs/img/screenshot.png)
+
+<details>
+  <summary>View web version</summary>
+
+  <p align="center">
+    <img width="33%" src="./docs/img/screenshot-mobile.png">
+  </p>
+</details>
 
 ## Usage
 
 1. Open your browser and navigate to https://44733.netlify.app/.
-2. Enter the lottery number you want to search for in the search bar.
-3. Click the "Buscar" (Search) button to see the results.
+2. Go to [Loterías y Apuestas del Estado web](https://www.loteriasyapuestas.es/es/buscar-decimo) to download locations file.
+3. Click the "Subir fichero" (Upload file) button to upload the downloaded file and see the results.
 
 ## Project Setup
 
