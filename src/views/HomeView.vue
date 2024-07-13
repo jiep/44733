@@ -8,8 +8,6 @@ import { parseContent } from '@/utils/parser'
 
 const DEFAULT_FILENAME = 'Ningún fichero de localizaciones seleccionado'
 
-const number = ref(44733)
-
 const file = ref(undefined)
 const filename = ref(DEFAULT_FILENAME)
 
