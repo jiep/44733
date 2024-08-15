@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-import Phone from '@/components/Phone.vue'
+import PhoneIcon from '@/components/PhoneIcon.vue'
 
 import { Location } from '@/model/Location'
 import { getColor } from '@/utils/utils'
@@ -63,7 +63,9 @@ const phoneHref = computed(() => {
       </div>
     </a>
     <a class="flex flex-auto ml-4" :href="phoneHref">
-      <Phone class="fill-pink-500 active:fill-pink-600 hover:fill-pink-600 outline-none focus:outline-none"/>
+      <PhoneIcon
+        class="fill-pink-500 active:fill-pink-600 hover:fill-pink-600 outline-none focus:outline-none"
+      />
     </a>
   </div>
 </template>
