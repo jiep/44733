@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "run-p type-check lint format \"build-only {@}\" --",
+    "build": "npm run lint-format-types && run-p  \"build-only {@}\" --",
+    "lint-format-types": "run-p lint format type-check",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
