@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "npm run lint-format-types && run-p  \"build-only {@}\" --",
+    "build": "run-p lint-format-types && run-p  \"build-only {@}\" --",
     "lint-format-types": "run-p lint format type-check",
     "preview": "vite preview",
     "build-only": "vite build",
