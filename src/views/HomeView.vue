@@ -57,7 +57,14 @@ const handleFileUpload = async () => {
   <div class="h-full">
     <form class="m-4 items-center border border-yellow-600">
       <div class="flex flex-row items-center">
-        <input type="file" id="file_input" hidden @change="handleFileUpload()" ref="file" accept=".txt" />
+        <input
+          type="file"
+          id="file_input"
+          hidden
+          @change="handleFileUpload()"
+          ref="file"
+          accept=".txt"
+        />
         <label
           for="file_input"
           class="border border-pink-500 bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 hover:bg-pink-600 outline-none focus:outline-none ease-linear transition-all duration-150 text-center"
