@@ -64,7 +64,7 @@ const phoneHref = computed(() => {
     </a>
     <a class="flex flex-auto ml-4" :href="phoneHref">
       <PhoneIcon
-        class="fill-pink-500 active:fill-pink-600 hover:fill-pink-600 outline-none focus:outline-none"
+        class="fill-pink-500 active:fill-pink-600 hover:fill-pink-600 outline-hidden focus:outline-hidden"
       />
     </a>
   </div>
