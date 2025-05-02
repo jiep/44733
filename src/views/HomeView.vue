@@ -67,7 +67,7 @@ const handleFileUpload = async () => {
         />
         <label
           for="file_input"
-          class="border border-pink-500 bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 hover:bg-pink-600 outline-none focus:outline-none ease-linear transition-all duration-150 text-center"
+          class="border border-pink-500 bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 hover:bg-pink-600 outline-hidden focus:outline-hidden ease-linear transition-all duration-150 text-center"
         >
           Subir fichero
         </label>
