@@ -1,5 +1,5 @@
 export class Location {
-  name: string
+  id: number
   address: string
   city: string
   province: string
@@ -7,14 +7,14 @@ export class Location {
   phone: string
 
   constructor(
-    name: string,
+    id: number,
     address: string,
     city: string,
     province: string,
     series: Array<number>,
     phone: string
   ) {
-    this.name = name
+    this.id = id
     this.address = address
     this.city = city
     this.province = province
