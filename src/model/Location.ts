@@ -3,7 +3,7 @@ export class Location {
   address: string
   city: string
   province: string
-  series: Array<Number>
+  series: Array<number>
   phone: string
 
   constructor(
@@ -11,7 +11,7 @@ export class Location {
     address: string,
     city: string,
     province: string,
-    series: Array<Number>,
+    series: Array<number>,
     phone: string
   ) {
     this.name = name
