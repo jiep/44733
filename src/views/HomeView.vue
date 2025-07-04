@@ -32,8 +32,8 @@ const handleFileUpload = async () => {
 
   reader.addEventListener('load', function () {
     const data = this.result as string
-    // @ts-ignore: Object is possibly 'null'.
-    let items = parseContent(data).sort(
+    // @ts-expect-error: Object is possibly 'null'.
+    const items = parseContent(data).sort(
       (a: Location, b: Location) => b.series.length - a.series.length
     )
     locations.items = items
@@ -41,11 +41,11 @@ const handleFileUpload = async () => {
     visible.value = true
   })
   try {
-    // @ts-ignore: Object is possibly 'undefined'.
+    // @ts-expect-error: Object is possibly 'undefined'.
     reader.readAsText(file.value.files[0])
-    // @ts-ignore: Object is possibly 'undefined'.
+    // @ts-expect-error: Object is possibly 'undefined'.
     filename.value = file.value.files[0].name
-  } catch (error) {
+  } catch {
     isLoading.value = false
     visible.value = false
     filename.value = DEFAULT_FILENAME
