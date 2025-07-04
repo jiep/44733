@@ -36,10 +36,8 @@ const phoneHref = computed(() => {
       <div class="flex flex-col w-full">
         <div class="flex items-center justify-between w-auto">
           <p class="flex truncate text-lg font-semibold text-yellow-700 mr-2">
-            <template v-if="location.name">
-              {{ location.name }}
-            </template>
-            <template v-else> Sin nombre :( </template>
+            <template v-if="location.id"> Administración {{ location.id }} </template>
+            <template v-else> Administración sin número :( </template>
           </p>
           <div class="flex text-sm font-medium text-gray-500">
             <p class="mr-1 font-bold" :class="styles.color">{{ location.series.length }}</p>
