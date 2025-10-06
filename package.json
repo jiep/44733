@@ -17,7 +17,7 @@
     "vue-router": "4.5.1"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "1.11.0",
+    "@rushstack/eslint-patch": "1.13.0",
     "@tailwindcss/postcss": "4.1.11",
     "@tsconfig/node20": "20.1.6",
     "@types/node": "24.1.0",
