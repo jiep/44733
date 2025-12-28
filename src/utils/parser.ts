@@ -12,7 +12,7 @@ export function parseContent(content: string): Location[] | undefined {
       const [key, ...rest] = line.split(':')
       const value = rest.join(':').trim()
 
-      switch (key.trim()) {
+      switch (key?.trim()) {
         case 'Administración':
           location.id = parseInt(value, 10)
           break
