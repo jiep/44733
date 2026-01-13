@@ -20,7 +20,7 @@
     "@rushstack/eslint-patch": "1.15.0",
     "@tailwindcss/postcss": "4.1.18",
     "@tsconfig/node20": "20.1.8",
-    "@types/node": "24.9.2",
+    "@types/node": "25.0.7",
     "@vitejs/plugin-vue": "6.0.1",
     "@vue/eslint-config-prettier": "10.2.0",
     "@vue/eslint-config-typescript": "14.6.0",
